@@ -20,7 +20,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "ZOOM",
-  description: "Created by Ifeanyi",
+  description: "Video Calling app Created by Ifeanyi",
+  icons: {icon: '/icons/logo.svg'}
 };
 
 export default function RootLayout({
