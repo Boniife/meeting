@@ -7,6 +7,8 @@ import MeetingModal from './MeetingModal';
 import { useUser } from '@clerk/nextjs';
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useToast } from '@/hooks/use-toast';
+import { Textarea } from './ui/textarea';
+import ReactDatePicker from 'react-datepicker';
 
 const MeetingTypeList = () => {
     const router = useRouter();
@@ -96,11 +98,26 @@ const MeetingTypeList = () => {
           title='Create Meeting'
           handleClick={createMeeting}
         >
-          {/* <div className='flex flex-col gap-2.5'>
-            <label className='text-base text-normal leading-[22px text-sky-2'>
+           <div className='flex flex-col gap-2.5'>
+            <label className='text-base text-normal leading-[22px] text-sky-2'>
               Add a description
             </label>
-          </div> */}
+            <Textarea 
+              className='border-none bg-dark-3 focus-visible:ring-0 focus-visible-ring-offset-0'
+              onChange={(e) => {
+                setValues({...values, description: e.target.value})
+              }}
+              />
+          </div>
+          <div className='flex w-full flex-col gap-2.5'>
+          <label className='text-base text-normal leading-[22px] text-sky-2'>
+              Select Date and Time
+            </label>
+            <ReactDatePicker 
+              selected={values.dateTime}
+              onChange={(date) => setValues({...values, dateTime: date!})}
+            />
+          </div>
         </MeetingModal>
       ): (
         <MeetingModal
