@@ -12,11 +12,11 @@ const Navbar = () => {
           src='/icons/logo.svg'
           width={32}
           height={32}
-          alt='zoom logo'
+          alt='Meeting logo'
           className='max-sm:size-10'
         />
         <p className='text-[26px] font-extrabold text-white max-sm:hidden'>
-          Zoom
+          Meeting
         </p>
       </Link>
 

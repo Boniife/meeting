@@ -28,11 +28,11 @@ const MobileNav = () => {
                         src='/icons/logo.svg'
                         width={32}
                         height={32}
-                        alt='zoom logo'
+                        alt='Meeting logo'
                         className='max-sm:size-10'
                     />
                     <p className='text-[26px] font-extrabold text-white'>
-                        Zoom
+                        Meeting
                     </p>
                 </Link>
 
@@ -51,7 +51,7 @@ const MobileNav = () => {
                                 })}
                                 >
                                     <Image 
-                                    src={link.imgUrl}
+                                    src={link.imgURL}
                                     alt={link.label}
                                     width={20}
                                     height={20}

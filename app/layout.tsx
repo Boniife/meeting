@@ -20,7 +20,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ZOOM",
+  title: "MEETING",
   description: "Video Calling app Created by Ifeanyi",
   icons: {icon: '/icons/logo.svg'}
 };
